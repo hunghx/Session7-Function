@@ -55,17 +55,29 @@
         // getSum(arr1)
         // console.log(arr1);
 
-        // let kiemTraSoNguyenTo = function (so) {
-        //     if (so < 2) {
-        //         return false
-        //     }
-        //     for (let i = 2; i < so; i++) {
-        //         if (so % i === 0) {
-        //             return false
-        //         }
-        //     }
-        //     return true
-        // }
+        let kiemTraSoNguyenTo = function (so) {
+            if (so < 2) {
+                return false
+            }
+            for (let i = 2; i < so; i++) {
+                if (so % i === 0) {
+                    return false
+                }
+            }
+            return true
+        }
+        let count = 0;
+        let so = 2;
+        while (true) {
+            if (kiemTraSoNguyenTo(so)) {
+                console.log(so);
+                count++
+            }
+            so++;
+            if (count === n) {
+                break
+            }
+        }
 
         // console.log(kiemTraSoNguyenTo(2))
         // console.log(kiemTraSoNguyenTo(1))
@@ -143,13 +155,13 @@
         let a = 101 / 100;
         console.log(Math.ceil(a));
         // helo các bạn trẻ ,abcxyz
-        //helo các bạn ...
+        //helo các tinhBinhPhuong
         // hàm cắt chuỗi
-        let string = " rikkei accademy"
-        console.log(string.endsWith("demy"));
-        let subString = string.slice(0, 10)
-        subString = subString.concat("...")
-        console.log(subString)
+        // qui tắc đặt tên biến , camelscase
+        function tinhBinhPhuong() {
+
+        }
+        tinhBinhPhuong()
 
     </script>
 </body>

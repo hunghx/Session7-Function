@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = [2, 1, 4, 5, 7, -3, 4, 6];
+        let arr2Chieu = [[1, 4, 5], [3, 6, 9]];
+        let arr2 = [2, 10, 4, 5, 7, -3, 4, 6];
+        let arr3 = [2, 1, 4, 5, 20, -3, 4, 6];
+        let arr4 = [2, 1, 4, 100, 7, -3, 4, 6];
+        function timSoLonNhat(arr) {
+            let max = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i]
+                }
+            }
+            return max;
+        }
+        function timSoLonNhat2(arr) {
+            let max = arr[0][0];
+            for (let i = 0; i < 2; i++) {
+                for (let j = 0; j < 3; j++) {
+                    if (arr[i][j] > max) {
+                        max = arr[i][j]
+                    }
+                }
+            }
+            return max;
+        }
+
+        console.log("Sô lớn nhất của mảng arr 1 là ", timSoLonNhat(arr1));
+        console.log("Sô lớn nhất của mảng arr 2 là ", timSoLonNhat(arr2));
+        console.log("Sô lớn nhất của mảng arr 3 là ", timSoLonNhat(arr3));
+        console.log("Sô lớn nhất của mảng arr 4 là ", timSoLonNhat(arr4));
+        console.log("Sô lớn nhất của mảng 2 chiều là ", timSoLonNhat2(arr2Chieu));
+
+        // thuật toán kiểm tra số hoàn hảo 
+
+        function kiemTraSoHoanHao(so) {
+            let tongUoc = 0
+            for (let i = 1; i < so; i++) {
+                if (so % i === 0) {
+                    tongUoc += i;
+                }
+            }
+            if (tongUoc = so) {
+                return true
+            }
+            return false
+        }
+        kiemTraSoHoanHao(6)
+        kiemTraSoHoanHao(5)
+    </script>
+</body>
+
+</html>

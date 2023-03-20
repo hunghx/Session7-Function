@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="main.js"></script>
+    <script>
+        function tinhTheKyTheoNam(year) {
+            let theKy = Math.ceil(year / 100);
+            return theKy;
+        }
+
+        let year = +prompt("Nhap vao so nam cần chuyen sang the ki")
+
+        console.log(year + " là thế kỉ thứ " + tinhTheKyTheoNam(year))
+
+    </script>
+</body>
+
+</html>
