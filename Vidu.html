@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function - Hàm -  thực hiện 1 chức năng cụ thể
+        // hàm tính tổng của 2 số a và b
+        // Cú pháp khai báo 
+        // function sum(a, b) {
+        //     console.log(a);
+        //     console.log(b);
+        //     let result = a + b;
+        //     return result;
+        //     // toàn bộ code dưới này không được chạy
+        // }
+        // function sum(a, b) {
+        //     return a - b;
+        // }
+        // console.log(a);
+        // gọi hàm
+
+        // console.log("Tong cua 2 va 3 la :" + sum(2, 3))
+        // console.log("Tong cua 1 va 3 la :" + sum(1, 3))
+        // console.log("Tong cua 5 va 6 la :" + sum(5, 6))
+        // console.log("Tong cua 4 va 5 la :" + sum(4, 5))
+        // console.log("Tong cua 0 va 0 la :" + sum(0, 0))
+        // Tham trị và tham chiếu 
+        // let a = 2, b = 3;
+        // function sub(c, d) {
+        //     let hieu = c - d
+        //     c += 1;
+        //     d += 2;
+        //     return hieu;
+        // }
+        // sub(a, b);
+        // console.log(a, b);
+
+        // let arr1 = [1, 2, 3];
+        // function getSum(arr) {
+        //     let sum = 0;
+        //     for (let i = 0; i < arr.length; i++) {
+        //         sum += arr[i]
+        //     }
+        //     arr.push(4);
+        //     return sum;
+        // }
+
+        // getSum(arr1)
+        // console.log(arr1);
+
+        // let kiemTraSoNguyenTo = function (so) {
+        //     if (so < 2) {
+        //         return false
+        //     }
+        //     for (let i = 2; i < so; i++) {
+        //         if (so % i === 0) {
+        //             return false
+        //         }
+        //     }
+        //     return true
+        // }
+
+        // console.log(kiemTraSoNguyenTo(2))
+        // console.log(kiemTraSoNguyenTo(1))
+        // console.log(kiemTraSoNguyenTo(91))
+        // console.log(kiemTraSoNguyenTo(101))
+        // console.log(kiemTraSoNguyenTo(97))
+        // invoke funtion - hàm tự gọi 
+        // (function (so) {
+        //     if (so < 2) {
+        //         console.log(so + " không là số nguyên tố")
+        //     }
+        //     for (let i = 2; i < so; i++) {
+        //         if (so % i === 0) {
+        //             console.log(so + " không là số nguyên tố");
+        //         }
+        //     }
+        //     console.log(so + "là số nguyên tố");
+        // })(101);
+        // // arrow funtion - hàm mũi tên 
+        // // ()=>{}
+        // let obj = {
+        //     "id": 1,
+        //     "name": "hùng"
+        // }
+        // obj.id // 1
+        // obj.name // hùng
+        // let printSoX2 = (x) => ({ "x mu 2": x * x })
+
+
+        // console.log({ " x mu 2 = ": printSoX2(2) })
+        // rest parameter - dải tham số
+        // khai báo các hàm tình tổng 2 số , 3 số, 4 số ,5 sô ,...
+        function tongDaySo(...restParameters) {
+            let tong = 0;
+            for (let i = 0; i < restParameters.length; i++) {
+                tong += restParameters[i]
+            }
+            console.log(tong);
+        }
+        // tính tổng 2 số 
+        tongDaySo(2, 3);
+        // tổng 3 số
+        tongDaySo(1, 2, 3);
+        // tổng 10 số 
+        tongDaySo(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+        // hàm nặc danh , closure
+        // hàm không có tên 
+
+        function functionA(so) {
+            console.log(" số a la " + so)
+        }
+        function functionB(agguments, callback) {
+            callback(agguments) // functionA(2)
+        }
+        // call back là 1 hàm là tham tham số của hàm khác
+        functionB(2, functionA) // function A là 1 callback function
+        // funtionB 1 high orderfunction
+
+
+        // clearInterval(id)
+
+        // function makeFunc() {
+        //     let name = "Mozilla";// khai báo mozila
+        //     function displayName() {
+        //         console.log(name);
+        //     }
+        //     return displayName;
+        // }
+
+        // const myFunc = makeFunc();
+        // myFunc();
+        // myFunc();
+        // myFunc();
+        // callback function
+        let a = 101 / 100;
+        console.log(Math.ceil(a));
+        // helo các bạn trẻ ,abcxyz
+        //helo các bạn ...
+        // hàm cắt chuỗi
+        let string = " rikkei accademy"
+        console.log(string.endsWith("demy"));
+        let subString = string.slice(0, 10)
+        subString = subString.concat("...")
+        console.log(subString)
+
+    </script>
+</body>
+
+</html>
